@@ -68,7 +68,7 @@
                             <a 
                                 asp-action="unRSVP"
                                 asp-controller="Wedding"
-                                asp-route-attendId="@wedding.WeddingAttenders.FirstOrDefault(att => att.WeddingId == wedding.WeddingId).AttendId"
+                                asp-route-attendId="@wedding.WeddingAttenders.FirstOrDefault(att => att.WeddingId == wedding.WeddingId && att.UserId == ViewBag.UserId).AttendId"
                             >
                                 unRSVP
                             </a>
